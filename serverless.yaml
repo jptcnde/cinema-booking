@@ -1,0 +1,52 @@
+
+
+service: cinema # NOTE: update this with your service name
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+  - serverless-plugin-tables
+
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  environment:
+    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - "dynamodb:*"
+      Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/*"
+functions:
+  getTickets:
+    handler: server/lambda.getTickets
+    events:
+      - http:
+          path: tickets
+          method: get
+          cors: false
+  bookTickets:
+    handler: server/lambda.bookTickets
+    events:
+      - http:
+          path: tickets
+          method: put
+          cors: false
+  unbook:
+    handler: server/lambda.unbookTicket
+    events:
+      - http:
+          path: unbook
+          method: put
+          cors: false
+resources:
+  tables:
+    patron:
+      partitionKey: id
+    cinema:
+      partitionKey: id
+    movie:
+      partitionKey: id
+    ticket:
+      partitionKey: id
