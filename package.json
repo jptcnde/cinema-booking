@@ -100,7 +100,6 @@
     "json-server": "^0.15.1",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
-    "serverless": "^1.60.0",
-    "serverless-single-page-app-plugin": "file:./server/serverless-single-page-app-plugin"
+    "serverless": "^1.60.0"
   }
 }
