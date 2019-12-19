@@ -10,6 +10,8 @@ async function getTickets() {
 
     return {
       statusCode: 200,
+      // not recommended for real world app
+      headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify(Items)
     };
 
