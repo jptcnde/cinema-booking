@@ -15,6 +15,7 @@ function Input({ field, form, ...props }) {
     <TextField
       // eslint-disable-next-line react/jsx-props-no-spreading, react/prop-types
       {...field}
+      // eslint-disable-next-line react/jsx-props-no-spreading, react/prop-types
       {...props}
       // eslint-disable-next-line react/prop-types
       helperText={form.touched[field.name] && form.errors[field.name]}
@@ -31,7 +32,7 @@ function CheckoutForm(props) {
   useEffect(() => {
     const canSubmit = isValid || (!isEmpty(touched) && isEmpty(errors));
     onFormChange(values, canSubmit);
-  }, [values, isValid, touched]);
+  }, [values, isValid, touched, errors, onFormChange]);
 
   return (
     <Grid container spacing={2}>
