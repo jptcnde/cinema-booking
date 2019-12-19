@@ -1,0 +1,44 @@
+{
+  "patron": [
+    {
+      "id": "a1",
+      "name": "jopet pogi",
+      "email": "jptconiconde@gmail.com"
+    },
+    {
+      "id": "a2",
+      "name": "tropet pogi",
+      "email": "jptcnde@gmail.com"
+    }
+  ],
+  "cinema": [
+    {
+      "seats": [20, 5],
+      "id": "a1",
+      "name": "Cinema A",
+      "location": "ABC Mall 3rd Floor Cross St. 12345"
+    }
+  ],
+  "movie": [
+    {
+      "id": "a1",
+      "name": "Batman Begins"
+    }
+  ],
+  "ticket": [
+    {
+      "id": "a1",
+      "movieId": "a1",
+      "cinemaId": "a1",
+      "booked": [
+        {
+          "seat": "0,1",
+          "patronEmail": "jptcnde@gmail.com",
+          "date": "2019-12-18T04:32:50"
+        }
+      ],
+      "unavailable": ["0,2"],
+      "date": "2019-12-18T04:32:50"
+    }
+  ]
+}
