@@ -82,6 +82,8 @@ async function bookTickets(event) {
 
     return {
       statusCode: 200,
+      // not recommended for real world app
+      headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify({})
     };
 

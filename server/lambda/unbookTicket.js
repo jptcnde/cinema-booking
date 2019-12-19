@@ -45,6 +45,8 @@ async function unbookTicket(event) {
 
     return {
       status: 200,
+      // not recommended for real world app
+      headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify({})
     };
 

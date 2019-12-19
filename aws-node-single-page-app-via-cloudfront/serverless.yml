@@ -1,11 +1,8 @@
+service: aws-node-single-page-app-via-cloudfront
 
-
-service: cinema # NOTE: update this with your service name
+frameworkVersion: ">=1.2.0 <2.0.0"
 
 plugins:
-  - serverless-offline
-  - serverless-dotenv-plugin
-  - serverless-plugin-tables
   - serverless-single-page-app-plugin
 
 custom:
@@ -14,45 +11,8 @@ custom:
 provider:
   name: aws
   runtime: nodejs8.10
-  environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - "dynamodb:*"
-      Resource: "arn:aws:dynamodb:${self:provider.region}:*:table/*"
-functions:
-  getTickets:
-    handler: server/lambda.getTickets
-    events:
-      - http:
-          path: tickets
-          method: get
-          cors: true
-  bookTickets:
-    handler: server/lambda.bookTickets
-    events:
-      - http:
-          path: tickets
-          method: put
-          cors: true
-  unbook:
-    handler: server/lambda.unbookTicket
-    events:
-      - http:
-          path: unbook
-          method: put
-          cors: true
+
 resources:
-  tables:
-    patron:
-      partitionKey: id
-    cinema:
-      partitionKey: id
-    movie:
-      partitionKey: id
-    ticket:
-      partitionKey: id
   Resources:
     ## Specifying the S3 Bucket
     WebAppS3Bucket:
