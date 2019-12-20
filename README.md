@@ -22,7 +22,7 @@ As per specs, the application no need for authentication, because of that I only
 create an avatar action that will be able to choose which email address (user). Email
 address should be valid as the application will send an email confirmation upon booking a seat.
 
-Please visit this (link)[http://cinema-booking.s3-website-us-east-1.amazonaws.com] for live demo.
+Please visit this [link](http://cinema-booking.s3-website-us-east-1.amazonaws.com) for live demo.
 
 
 ### tech stacks 
