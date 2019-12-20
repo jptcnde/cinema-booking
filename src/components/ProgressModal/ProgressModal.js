@@ -24,9 +24,13 @@ function ProgressModal(props) {
       aria-labelledby="progress"
       aria-describedby="progress indicator"
       open={open}
+      data-testid="progress-modal"
       className={classes.root}
     >
-      <CircularProgress className={classes.progress} />
+      <CircularProgress
+        data-testid="progress-indicator"
+        className={classes.progress}
+      />
     </Modal>
   );
 }
