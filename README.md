@@ -9,7 +9,6 @@ npm install or yarn
 ```
 npm start
 ```
-
 This will start a local server for api and react  web application
 
 ### Production Build
@@ -28,15 +27,15 @@ Please visit this (link)[http://cinema-booking.s3-website-us-east-1.amazonaws.co
 
 ### tech stacks 
 ```
-    "react",
-    "nodejs",
-    "lambda",
-    "aws",
-    "s3",
-    "javascript",
-    "dynamodb",
-    "material-ui",
-    "formik",
-    "testing-library",
-    "jest"
+  "react",
+  "nodejs",
+  "lambda",
+  "aws",
+  "s3",
+  "javascript",
+  "dynamodb",
+  "material-ui",
+  "formik",
+  "testing-library",
+  "jest"
 ```
