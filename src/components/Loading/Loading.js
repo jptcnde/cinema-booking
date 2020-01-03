@@ -15,7 +15,7 @@ const style = {
 };
 
 export default () => (
-  <div style={style}>
+  <div style={style} data-testid="loading">
     <img src={loading} alt="loading" />
   </div>
 );

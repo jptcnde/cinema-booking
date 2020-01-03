@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitForElementToBeRemoved } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import ProgressModal from './ProgressModal';
 
 describe('Progress Modal Component', () => {

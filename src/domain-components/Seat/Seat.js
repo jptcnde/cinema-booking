@@ -20,6 +20,8 @@ function Seat(props) {
       className={className}
       bgcolor={STATUS_COLORS[status]}
       onClick={() => onSelect(value, desc)}
+      data-testid="domain-cmp-seat"
+      aria-disabled={disabled}
     >
       <Typography color="inherit" variant="body1">
         {desc}
